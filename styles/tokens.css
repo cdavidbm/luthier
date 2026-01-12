@@ -1,0 +1,165 @@
+/**
+ * Luthier - Design Tokens
+ *
+ * Variables CSS globales que definen el sistema de diseño.
+ * Sobrescribe estas variables en tu tema para personalizar.
+ *
+ * Nomenclatura:
+ * --l-[categoria]-[propiedad]-[variante]
+ * Ejemplo: --l-color-primario-oscuro
+ */
+
+:root {
+    /* =========================================================================
+       COLORES
+       ========================================================================= */
+
+    /* Colores de marca (personalizar según entidad) */
+    --l-color-primario: #3366cc;
+    --l-color-primario-oscuro: #254a94;
+    --l-color-primario-claro: #6699ff;
+
+    --l-color-secundario: #009688;
+    --l-color-secundario-oscuro: #00796b;
+    --l-color-secundario-claro: #4db6ac;
+
+    --l-color-acento: #ff9800;
+
+    /* Colores neutros */
+    --l-color-texto: #333333;
+    --l-color-texto-secundario: #666666;
+    --l-color-texto-terciario: #999999;
+    --l-color-texto-invertido: #ffffff;
+
+    --l-color-fondo: #ffffff;
+    --l-color-fondo-secundario: #f5f5f5;
+    --l-color-fondo-terciario: #eeeeee;
+
+    --l-color-borde: #dddddd;
+    --l-color-borde-oscuro: #cccccc;
+
+    /* Colores semánticos */
+    --l-color-exito: #28a745;
+    --l-color-advertencia: #ffc107;
+    --l-color-error: #dc3545;
+    --l-color-info: #17a2b8;
+
+    /* Colores institucionales adicionales (personalizables) */
+    --l-institucional-azul: #3366cc;
+    --l-institucional-amarillo: #ffcc00;
+    --l-institucional-rojo: #cc0000;
+
+    /* =========================================================================
+       TIPOGRAFÍA
+       ========================================================================= */
+
+    /* Familias tipográficas */
+    --l-fuente-principal: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    --l-fuente-titulos: var(--l-fuente-principal);
+    --l-fuente-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
+
+    /* Tamaños de fuente (escala modular 1.25) */
+    --l-texto-xs: 0.75rem;      /* 12px */
+    --l-texto-sm: 0.875rem;     /* 14px */
+    --l-texto-base: 1rem;       /* 16px */
+    --l-texto-lg: 1.125rem;     /* 18px */
+    --l-texto-xl: 1.25rem;      /* 20px */
+    --l-texto-2xl: 1.5rem;      /* 24px */
+    --l-texto-3xl: 1.875rem;    /* 30px */
+    --l-texto-4xl: 2.25rem;     /* 36px */
+
+    /* Peso de fuente */
+    --l-peso-normal: 400;
+    --l-peso-medio: 500;
+    --l-peso-semibold: 600;
+    --l-peso-bold: 700;
+
+    /* Altura de línea */
+    --l-linea-apretada: 1.25;
+    --l-linea-normal: 1.5;
+    --l-linea-relajada: 1.75;
+
+    /* =========================================================================
+       ESPACIADO
+       ========================================================================= */
+
+    --l-espacio-xs: 0.25rem;    /* 4px */
+    --l-espacio-sm: 0.5rem;     /* 8px */
+    --l-espacio-md: 1rem;       /* 16px */
+    --l-espacio-lg: 1.5rem;     /* 24px */
+    --l-espacio-xl: 2rem;       /* 32px */
+    --l-espacio-2xl: 3rem;      /* 48px */
+    --l-espacio-3xl: 4rem;      /* 64px */
+
+    /* =========================================================================
+       LAYOUT
+       ========================================================================= */
+
+    --l-ancho-max: 1200px;
+    --l-ancho-contenido: 800px;
+    --l-padding-contenedor: var(--l-espacio-md);
+
+    /* =========================================================================
+       BORDES Y SOMBRAS
+       ========================================================================= */
+
+    --l-radio-sm: 0.25rem;      /* 4px */
+    --l-radio-md: 0.5rem;       /* 8px */
+    --l-radio-lg: 1rem;         /* 16px */
+    --l-radio-full: 9999px;
+
+    --l-sombra-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --l-sombra-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --l-sombra-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --l-sombra-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+    /* =========================================================================
+       TRANSICIONES
+       ========================================================================= */
+
+    --l-transicion-rapida: 150ms ease;
+    --l-transicion-normal: 250ms ease;
+    --l-transicion-lenta: 400ms ease;
+
+    /* =========================================================================
+       Z-INDEX
+       ========================================================================= */
+
+    --l-z-dropdown: 100;
+    --l-z-sticky: 200;
+    --l-z-fixed: 300;
+    --l-z-modal-backdrop: 400;
+    --l-z-modal: 500;
+    --l-z-tooltip: 600;
+
+    /* =========================================================================
+       ACCESIBILIDAD (modificables por widget)
+       ========================================================================= */
+
+    --l-a11y-escala-fuente: 1;
+    --l-a11y-espaciado-linea: 1;
+}
+
+/* =========================================================================
+   MODO OSCURO (opcional, activado por clase)
+   ========================================================================= */
+
+.tema-oscuro {
+    --l-color-texto: #e0e0e0;
+    --l-color-texto-secundario: #b0b0b0;
+    --l-color-fondo: #1a1a1a;
+    --l-color-fondo-secundario: #2d2d2d;
+    --l-color-fondo-terciario: #404040;
+    --l-color-borde: #404040;
+}
+
+/* =========================================================================
+   ALTO CONTRASTE (para accesibilidad)
+   ========================================================================= */
+
+.alto-contraste {
+    --l-color-texto: #000000;
+    --l-color-fondo: #ffffff;
+    --l-color-primario: #0000cc;
+    --l-color-borde: #000000;
+}

@@ -1,0 +1,234 @@
+/**
+ * Luthier - Clases Utilitarias
+ *
+ * Clases de utilidad para espaciado, bordes, sombras y mas.
+ * Basadas en variables CSS para consistencia.
+ */
+
+/* =============================================================================
+   PADDING
+   ============================================================================= */
+
+.p-0 { padding: 0; }
+.p-xs { padding: var(--l-espacio-xs); }
+.p-sm { padding: var(--l-espacio-sm); }
+.p-md { padding: var(--l-espacio-md); }
+.p-lg { padding: var(--l-espacio-lg); }
+.p-xl { padding: var(--l-espacio-xl); }
+
+.px-0 { padding-left: 0; padding-right: 0; }
+.px-sm { padding-left: var(--l-espacio-sm); padding-right: var(--l-espacio-sm); }
+.px-md { padding-left: var(--l-espacio-md); padding-right: var(--l-espacio-md); }
+.px-lg { padding-left: var(--l-espacio-lg); padding-right: var(--l-espacio-lg); }
+
+.py-0 { padding-top: 0; padding-bottom: 0; }
+.py-sm { padding-top: var(--l-espacio-sm); padding-bottom: var(--l-espacio-sm); }
+.py-md { padding-top: var(--l-espacio-md); padding-bottom: var(--l-espacio-md); }
+.py-lg { padding-top: var(--l-espacio-lg); padding-bottom: var(--l-espacio-lg); }
+
+/* =============================================================================
+   MARGIN
+   ============================================================================= */
+
+.m-0 { margin: 0; }
+.m-auto { margin: auto; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.ml-auto { margin-left: auto; }
+.mr-auto { margin-right: auto; }
+
+/* =============================================================================
+   BORDES
+   ============================================================================= */
+
+.rounded { border-radius: var(--l-radio-sm); }
+.rounded-md { border-radius: var(--l-radio-md); }
+.rounded-lg { border-radius: var(--l-radio-lg); }
+.rounded-full { border-radius: var(--l-radio-full); }
+.rounded-none { border-radius: 0; }
+
+.border { border: 1px solid var(--l-color-borde); }
+.border-0 { border: none; }
+.border-t { border-top: 1px solid var(--l-color-borde); }
+.border-b { border-bottom: 1px solid var(--l-color-borde); }
+.border-l { border-left: 1px solid var(--l-color-borde); }
+.border-r { border-right: 1px solid var(--l-color-borde); }
+
+/* =============================================================================
+   SOMBRAS
+   ============================================================================= */
+
+.shadow { box-shadow: var(--l-sombra-sm); }
+.shadow-md { box-shadow: var(--l-sombra-md); }
+.shadow-lg { box-shadow: var(--l-sombra-lg); }
+.shadow-xl { box-shadow: var(--l-sombra-xl); }
+.shadow-none { box-shadow: none; }
+
+/* =============================================================================
+   ACCESIBILIDAD
+   ============================================================================= */
+
+.visually-hidden,
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background: var(--l-color-primario);
+    color: var(--l-color-texto-invertido);
+    padding: var(--l-espacio-sm) var(--l-espacio-md);
+    z-index: var(--l-z-fixed);
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* =============================================================================
+   TEXTO
+   ============================================================================= */
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+
+.font-normal { font-weight: var(--l-peso-normal); }
+.font-medium { font-weight: var(--l-peso-medio); }
+.font-semibold { font-weight: var(--l-peso-semibold); }
+.font-bold { font-weight: var(--l-peso-bold); }
+
+/* =============================================================================
+   DISPLAY
+   ============================================================================= */
+
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+
+/* =============================================================================
+   POSICIONAMIENTO
+   ============================================================================= */
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+.top-0 { top: 0; }
+.right-0 { right: 0; }
+.bottom-0 { bottom: 0; }
+.left-0 { left: 0; }
+
+/* =============================================================================
+   TAMANO
+   ============================================================================= */
+
+.w-full { width: 100%; }
+.w-auto { width: auto; }
+.h-full { height: 100%; }
+.h-auto { height: auto; }
+.min-h-screen { min-height: 100vh; }
+
+/* =============================================================================
+   OVERFLOW
+   ============================================================================= */
+
+.overflow-hidden { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+.overflow-x-auto { overflow-x: auto; }
+.overflow-y-auto { overflow-y: auto; }
+
+/* =============================================================================
+   Z-INDEX
+   ============================================================================= */
+
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-50 { z-index: 50; }
+.z-dropdown { z-index: var(--l-z-dropdown); }
+.z-sticky { z-index: var(--l-z-sticky); }
+.z-fixed { z-index: var(--l-z-fixed); }
+.z-modal { z-index: var(--l-z-modal); }
+
+/* =============================================================================
+   CURSOR
+   ============================================================================= */
+
+.cursor-pointer { cursor: pointer; }
+.cursor-not-allowed { cursor: not-allowed; }
+.cursor-default { cursor: default; }
+
+/* =============================================================================
+   TRANSICIONES
+   ============================================================================= */
+
+.transition { transition: all var(--l-transicion-normal); }
+.transition-fast { transition: all var(--l-transicion-rapida); }
+.transition-slow { transition: all var(--l-transicion-lenta); }
+.transition-none { transition: none; }
+
+/* =============================================================================
+   OPACIDAD
+   ============================================================================= */
+
+.opacity-0 { opacity: 0; }
+.opacity-25 { opacity: 0.25; }
+.opacity-50 { opacity: 0.5; }
+.opacity-75 { opacity: 0.75; }
+.opacity-100 { opacity: 1; }
+
+/* =============================================================================
+   ESCALA DE GRISES (Accesibilidad)
+   ============================================================================= */
+
+.escala-grises {
+    filter: grayscale(100%);
+}
+
+.escala-grises img {
+    filter: grayscale(100%);
+}

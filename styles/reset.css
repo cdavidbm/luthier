@@ -1,0 +1,164 @@
+/**
+ * Luthier - CSS Reset
+ *
+ * Normalización cross-browser basada en modern-normalize
+ * con ajustes para accesibilidad y buenas prácticas.
+ */
+
+/* Box sizing global */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Eliminar márgenes por defecto */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Configuración base del documento */
+html {
+    /* Tamaño de fuente base respeta configuración del usuario */
+    font-size: calc(100% * var(--l-a11y-escala-fuente, 1));
+    /* Scroll suave para anclas */
+    scroll-behavior: smooth;
+    /* Altura mínima del viewport */
+    min-height: 100%;
+    /* Prevenir ajustes de texto en iOS */
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Respetar preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Body base */
+body {
+    min-height: 100vh;
+    font-family: var(--l-fuente-principal);
+    font-size: var(--l-texto-base);
+    line-height: calc(var(--l-linea-normal) * var(--l-a11y-espaciado-linea, 1));
+    color: var(--l-color-texto);
+    background-color: var(--l-color-fondo);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Imágenes responsivas por defecto */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Heredar fuentes en formularios */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+/* Evitar overflow de texto */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* Títulos sin márgenes absurdos por defecto */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--l-fuente-titulos);
+    font-weight: var(--l-peso-bold);
+    line-height: var(--l-linea-apretada);
+}
+
+/* Enlaces accesibles */
+a {
+    color: var(--l-color-primario);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+a:hover {
+    color: var(--l-color-primario-oscuro);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--l-color-primario);
+    outline-offset: 2px;
+}
+
+/* Listas sin bullets por defecto en navegación */
+nav ul,
+nav ol {
+    list-style: none;
+}
+
+/* Tablas colapsadas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Botones reseteados */
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Textarea sin resize horizontal */
+textarea {
+    resize: vertical;
+}
+
+/* Ocultar contenido solo visualmente (accesible para lectores de pantalla) */
+.visualmente-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Skip link visible solo con focus */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background: var(--l-color-primario);
+    color: var(--l-color-texto-invertido);
+    padding: var(--l-espacio-sm) var(--l-espacio-md);
+    z-index: var(--l-z-fixed);
+}
+
+.skip-link:focus {
+    top: 0;
+}
