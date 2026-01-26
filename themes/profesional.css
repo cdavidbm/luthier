@@ -1,0 +1,48 @@
+/*
+ * Tema Profesional
+ * Navy + dorado. Bufetes, consultoras, educacion.
+ * Inspirado en paletas de universidades clasicas (Oxford, etc).
+ * Cargar despues de tokens.css
+ */
+
+:root {
+    /* Colores de marca */
+    --l-color-primario: #002147;
+    --l-color-primario-oscuro: #001229;
+    --l-color-primario-claro: #003366;
+
+    --l-color-secundario: #1a4d7c;
+    --l-color-secundario-oscuro: #0d3354;
+    --l-color-secundario-claro: #2d6da8;
+
+    --l-color-acento: #b38b40;
+
+    /* Colores de texto ajustados */
+    --l-color-texto: #1a1a2e;
+    --l-color-texto-secundario: #4a4a5a;
+
+    /* Fondos sutiles */
+    --l-color-fondo-secundario: #f8f9fa;
+    --l-color-fondo-terciario: #e9ecef;
+
+    /* Bordes refinados */
+    --l-color-borde: #d1d5db;
+    --l-color-borde-oscuro: #9ca3af;
+
+    --l-fuente-principal: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --l-fuente-titulos: 'Nunito Sans', var(--l-fuente-principal);
+
+    /* Sombras con tinte azul para coherencia con la paleta */
+    --l-sombra-md: 0 4px 12px rgba(0, 33, 71, 0.08);
+    --l-sombra-lg: 0 8px 24px rgba(0, 33, 71, 0.12);
+}
+
+/* Variante oscura del tema */
+.tema-oscuro {
+    --l-color-primario: #4a90d9;
+    --l-color-primario-claro: #6ba8e8;
+    --l-color-acento: #d4a84b;
+    --l-color-fondo: #0f172a;
+    --l-color-fondo-secundario: #1e293b;
+    --l-color-fondo-terciario: #334155;
+}
