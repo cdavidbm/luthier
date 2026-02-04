@@ -1,0 +1,32 @@
+site_name: Luthier
+site_description: Framework de Web Components para sitios web estáticos
+site_author: Luthier Contributors
+site_url: https://luthier.readthedocs.io
+
+repo_name: cdavidbm/luthier
+repo_url: https://github.com/cdavidbm/luthier
+
+theme:
+  name: readthedocs
+  locale: es
+
+nav:
+  - Inicio: README.md
+  - Guia de Inicio: QUICKSTART.md
+  - Manifiesto: MANIFESTO.md
+  - Arquitectura: ARCHITECTURE.md
+  - Componentes: COMPONENTS.md
+  - Temas: THEMES.md
+  - Seguridad: SECURITY.md
+  - Integracion CMS: CMS-INTEGRATION.md
+  - Changelog: CHANGELOG.md
+
+docs_dir: docs
+
+markdown_extensions:
+  - tables
+  - fenced_code
+  - toc:
+      permalink: true
+  - attr_list
+  - def_list
